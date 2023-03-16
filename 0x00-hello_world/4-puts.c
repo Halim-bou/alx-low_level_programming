@@ -1,5 +1,5 @@
 #!/bin/bash
-#include<stdio.h>
+#include <stdio.h>
 /**
  * int mane - entry point
  * input (Programming is like building a multilingual puzzle)
