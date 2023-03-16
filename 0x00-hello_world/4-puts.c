@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * int mane - entry point
- * input (Programming is like building a multilingual puzzle)
+ * int main the Programming is like building a multilingual puzzle
+ *
  * return: always 0 (success)
  */
 int main(void)
