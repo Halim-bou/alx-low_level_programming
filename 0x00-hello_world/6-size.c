@@ -9,14 +9,14 @@ int main(void)
 {
 	char c;
 	int i;
-	long int li;
-	long long int lli;
+	long int l;
+	long long int o;
 	float f;
 
 	printf("Size of a char: %lu.\n", (unsigned)sizeof(c));
 	printf("Size of an int: %lu.\n", (unsigned)sizeof(i));
-	printf("Size of a long int: %lu.\n", (unsigned)sizeof(li));
-	printf("Size of a long long int: %lu.\n", (unsigned)sizeof(lli));
+	printf("Size of a long int: %lu.\n", (unsigned)sizeof(l));
+	printf("Size of a long long int: %lu.\n", (unsigned)sizeof(o));
 	printf("Size of a float: %lu.\n", (unsigned)sizeof(f);
 	return (0);
 }
