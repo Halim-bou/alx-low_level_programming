@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -7,8 +6,11 @@
  */
 int main(void)
 {
-	write(STDOUT_FILENO, "and that piece of art is useful
-			\" - Dora Korpar, 2015-10-19\N", 59);
+	FILE *fp;
+	char str[] = "This is tutorialspoint.com";
+
+	fp = fopen("quote.c", "w");
+	fwrite(str, 1, sizeof(str), fp);
+	fclose(fp);
 	return (1);
-;
 }
