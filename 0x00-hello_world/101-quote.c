@@ -7,7 +7,8 @@
 int main(void)
 {
 	FILE *fp;
-	char str[] = "This is tutorialspoint.com";
+	char str[] = "and that piece of art is useful
+		\" - Dora Korpar, 2015-10-19";
 
 	fp = fopen("quote.c", "w");
 	fwrite(str, 1, sizeof(str), fp);
