@@ -9,7 +9,7 @@ int main(void)
 	char end = 'z';
 
 
-	char ch = start;
+	char ch = start++;
 
 	while (ch <= end)
 	{
