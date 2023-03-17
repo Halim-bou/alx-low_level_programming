@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main- assign a random number to the variable n each time it is executed
- * return: Always (success)
+ * Return: Always (success)
  *
  */
 
@@ -27,4 +27,5 @@ int main(void)
 		printf("%d is negative\n", n);
 		}
 		return (0);
+
 }
