@@ -6,14 +6,15 @@
 
 int main(void)
 {
-	char(alb, e, q);
-	e = 'e';
-	q = 'q';
+	char alb, E, Q;
+
+	E = 'e';
+	Q = 'q';
 
 
 	for (alb = 'a'; alb <= 'z'; alb++)
 	{
-		if (alb != e && alb != q)
+		if (alb != E && alb != Q)
 			putchar(alb);
 	}
 	putchar('\n');
