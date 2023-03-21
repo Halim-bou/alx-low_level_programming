@@ -16,12 +16,16 @@ int main(void)
 	{
 		for (j = '1'; j <= '9'; j++)
 		{
+		if (i < j)
+		{
 		putchar(i);
 		putchar(j);
-		{
+
 		if ((i != '9') || (i != '8' && j != '9'))
+		{
 		putchar(',');
 		putchar(' ');
+		}
 		}
 		}
 	}
