@@ -2,7 +2,7 @@
 
 /**
  * rev_string - reverses string
- * @s; the string to reverse
+ * @s: the string to reverse
  * Return:Always (success)
  */
 
@@ -11,7 +11,8 @@ void rev_string(char *s)
 	int i, j, k;
 	char a;
 
-	for (i = 0; s[i] != '\0'; i++);
+	for (i = 0; s[i] != '\0'; i++)
+
 	j = 0;
 	k = i / 2;
 
