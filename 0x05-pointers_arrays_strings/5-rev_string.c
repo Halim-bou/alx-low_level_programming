@@ -5,28 +5,21 @@
  * @s; the string to reverse
  * Return:Always (success)
  */
+
 void rev_string(char *s)
 {
-		int i, c, k;
-	char *a, aux;
+	int i, j, k;
+	char a;
 
-	a = s;
+	for (i = 0; s[i] != '\0'; i++);
+	j = 0;
+	k = i / 2;
 
-	while (s[c] != '\0')
+	while (k--)
 	{
-		c++;
-	}
-
-	for (k = 1; k < c; k++)
-	{
-		a++;
-	}
-
-	for (i = 0; i < (c / 2); i++)
-	{
-		aux = s[i];
-		s[i] = *a;
-		*a = aux;
-		a--;
+		a = s[i - j - 1];
+		s[i - j - 1] = s[j];
+		s[j] = a;
+		j++;
 	}
 }
