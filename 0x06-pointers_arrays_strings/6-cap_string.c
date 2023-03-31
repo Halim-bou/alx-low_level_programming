@@ -40,7 +40,7 @@ char *cap_string(char *str)
 				}
 				else
 				{
-					str[i] = str[i] -  32;
+					str[i] -=  32;
 				}
 			}
 		}
