@@ -10,41 +10,33 @@ char *cap_string(char *str)
 {
 	int i = 0;
 
-	while (str[i])
+	for(; str[i] != '\0'; i++)
 	{
-		while (!(str[i] >= 65 && str[i] <= 96))
+		if (str[i - 1] == '\n' ||
+				str[i - 1] == '\t' ||
+				str[i - 1] == ' ' ||
+				str[i - 1] == ',' ||
+				str[i - 1] == ';' ||
+				str[i - 1] == '.' ||
+				str[i - 1] == '!' ||
+				str[i - 1] == '?' ||
+				str[i - 1] == '"' ||
+				str[i - 1] == '(' ||
+				str[i - 1] == ')' ||
+				str[i - 1] == '{' ||
+				str[i - 1] == '}')
 		{
-			i++;
-			if (str[i] == '\n' ||
-					str[i - 1] == '\t' ||
-					str[i - 1] == ' ' ||
-					str[i - 1] == ',' ||
-					str[i - 1] == ';' ||
-					str[i - 1] == '.' ||
-					str[i - 1] == '!' ||
-					str[i - 1] == '?' ||
-					str[i - 1] == '"' ||
-					str[i - 1] == '(' ||
-					str[i - 1] == ')' ||
-					str[i - 1] == '{' ||
-					str[i - 1] == '}' ||
-					i == 0)
+			if ( str[i] == ' ' ||
+					(str[i] >= 'A' && str[i] <= 'Z')||
+					str[i] == '\n')
 			{
-				if ( str[i] == ' ' || str[i] == '\n')
-				{
-					continue;
-				}
-				else if (str[i] >= 65 && str[i] <= 96)
-				{
-					continue;
-				}
-				else
-				{
-					str[i] -=  32;
-				}
+				continue;
+			}
+			else
+			{
+				str[i] -= 32;
 			}
 		}
-		i++;
 	}
 	return (str);
 }
