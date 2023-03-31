@@ -8,29 +8,43 @@
  */
 char *cap_string(char *str)
 {
-	int i ,j = 0;
+	int i = 0;
 
-	while (str[j] != '\0')
+	while (str[i])
 	{
-		j++;
-	}
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == '\n' || str[i] == '\t' || str [i] == ' ' || str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+		while (!(str[i] >= 65 && str[i] <= 96))
 		{
-			if (str[i + 1] == str[j] || str[i + 1] == ' ' || str[i + 1] == '\n')
+			i++;
+			if (str[i] == '\n' ||
+					str[i - 1] == '\t' ||
+					str[i - 1] == ' ' ||
+					str[i - 1] == ',' ||
+					str[i - 1] == ';' ||
+					str[i - 1] == '.' ||
+					str[i - 1] == '!' ||
+					str[i - 1] == '?' ||
+					str[i - 1] == '"' ||
+					str[i - 1] == '(' ||
+					str[i - 1] == ')' ||
+					str[i - 1] == '{' ||
+					str[i - 1] == '}' ||
+					i == 0)
 			{
-				continue;
-			}
-			else if (str[i +1] >= 65 && str[i + 1] <= 96)
-			{
-				continue;
-			}
-			else
-			{
-				str[i + 1] = str[i + 1] -  32;
+				if ( str[i] == ' ' || str[i] == '\n')
+				{
+					continue;
+				}
+				else if (str[i] >= 65 && str[i] <= 96)
+				{
+					continue;
+				}
+				else
+				{
+					str[i] = str[i] -  32;
+				}
 			}
 		}
+		i++;
 	}
 	return (str);
 }
