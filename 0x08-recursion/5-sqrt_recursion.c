@@ -1,6 +1,7 @@
 #include "main.h"
 
 int _sqrt(int n, int i);
+
 /**
  * _sqrt_recursion - returns the natural sqrt of a number
  * @n: the number to be calculate
@@ -21,6 +22,7 @@ int _sqrt_recursion(int n)
 int _sqrt(int n, int i)
 {
 	int a;
+
 	a = i * i;
 
 	if (a > n)
