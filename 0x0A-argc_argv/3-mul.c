@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int mull = 0, m = 0, n = 0;
 
-	if (argc > 1 && argc < 4)
+	if (argc >= 1 && argc =< 3)
 	{
 		m = _atoi(argv[1]);
 		n = _atoi(argv[2]);
