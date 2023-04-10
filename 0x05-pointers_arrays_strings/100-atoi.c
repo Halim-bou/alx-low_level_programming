@@ -9,9 +9,9 @@
 int _atoi(char *s)
 {
 	int i = 0;
-	int j = 0;
+	unsigned int j = 0;
 	int k = 1;
-	unsigned int n = 0;
+	int n = 0;
 
 	while (s[i])
 	{
