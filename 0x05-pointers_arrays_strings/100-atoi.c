@@ -31,5 +31,6 @@ int _atoi(char *s)
 	}
 	i++;
 	}
-	return (k * j);
+	j = j * k;
+	return (j);
 }
