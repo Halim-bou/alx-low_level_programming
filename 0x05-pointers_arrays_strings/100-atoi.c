@@ -15,10 +15,9 @@ int _atoi(char *s)
 
 	while (s[i])
 	{
-	if (s[0] == '-')
+	if (s[i] == '-')
 	{
-		k = -1;
-		i++;
+		k *= -1;
 	}
 	for (; s[i] >= '0' && s[i] <= '9'; i++)
 	{
