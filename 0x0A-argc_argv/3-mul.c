@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
  * main - multiplies two numbers
@@ -9,15 +9,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1, sum = 0;
+	int mull = 0;
 
 	if (argc > 1)
 	{
-		for (; i < argc; i++)
-		{
-			sum += *argv[i];
-		}
-		printf("%i\n", sum);
+		mull = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", mull);
 	}
 	else
 		printf("Error\n");
