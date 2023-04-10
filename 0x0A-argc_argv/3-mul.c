@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		{
 			sum += *argv[i];
 		}
-		printf("%d\n", sum);
+		printf("%i\n", sum);
 	}
 	else
 		printf("Error\n");
