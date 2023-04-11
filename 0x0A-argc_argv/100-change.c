@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	cn = atoi(argv[1]);
-	while (cn > 0)
+       if (cn > 0)
 	{
 		if (cn >= 25)
 		{
