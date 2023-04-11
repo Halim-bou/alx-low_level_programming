@@ -18,34 +18,34 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	cn = atoi(argv[1]);
-       if (cn > 0)
+       while (cn > 0)
 	{
 		if (cn >= 25)
 		{
 			cn -= 25;
 			p += 1;
 		}
-		if (cn >= 10)
+		else if (cn >= 10)
 		{
 			cn -= 10;
 			p += 1;
 		}
-		if (cn >= 5)
+		else if (cn >= 5)
 		{
 			cn -= 5;
 			p += 1;
 		}
-		if (cn >= 2)
+		else if (cn >= 2)
 		{
 			cn -= 2;
 			p += 1;
 		}
-		if (cn >= 1)
+		else if (cn >= 1)
 		{
 			cn -= 1;
 			p += 1;
 		}
-		printf("%d\n", p);
 	}
+	printf("%d\n", p);
 	return (0);
 }
