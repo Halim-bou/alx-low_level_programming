@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 
 /**
  * main - add argument numbers
@@ -11,32 +11,26 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	char *one;
 	unsigned int j = 0;
 	unsigned int sum = 0;
 
-	if (argc == 1)
+	if (argc <= 1)
 	{
 		printf("0\n");
+		return (0);
 	}
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			one = argv[i];
-			while (j < strlen(one))
+			if (!(isdigit(argv[i][j])))
 			{
-				if (one[j] < '0' || one[j] > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
-				j++;
+				printf("Error\n");
+				return (1);
 			}
-			sum = sum + atoi(one);
-			one++;
 		}
-			printf("%d\n", sum);
+		sum = sum + atoi(argv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
