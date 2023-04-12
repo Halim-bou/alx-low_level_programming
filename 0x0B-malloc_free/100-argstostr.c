@@ -20,16 +20,15 @@ char *argstostr(int ac, char **av)
 	}
 	while (i < ac)
 	{
+		j = 0;
 		while (av[i][j])
 		{
 			j++;
 			l++;
 		}
-		l++;
 		i++;
 	}
-	l++;
-	ar = malloc(l * sizeof(char));
+	ar = malloc((l * sizeof(char) + ac + 1));
 	if (ar == NULL)
 	{
 		return (NULL);
