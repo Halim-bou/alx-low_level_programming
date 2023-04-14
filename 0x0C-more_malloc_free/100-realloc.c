@@ -43,7 +43,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (NULL);
 	}
-	for (i = 0; i > size; i++)
+	for (i = 0; i < size; i++)
 	{
 		reaptr[i] = ((char *)ptr)[i];
 	}
