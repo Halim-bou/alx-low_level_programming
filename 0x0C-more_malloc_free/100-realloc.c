@@ -15,27 +15,23 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *reaptr;
 	unsigned int i, size;
 
+	if (new_size == old_size)
+		return (ptr);
+
+	if (new_size > old_size)
+		size = old_size;
+	else
+		size = new_size;
+
 	if (ptr != NULL && new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	if (new_size == old_size)
-	{
-		return (ptr);
-	}
-	size = new_size;
-	if (size > old_size)
-	{
-		size = old_size;
-	}
+
 	if (ptr == NULL)
 	{
 		reaptr = malloc(new_size);
-		if (reaptr == NULL)
-		{
-			return (NULL);
-		}
 		return (reaptr);
 	}
 	reaptr = malloc(new_size);
