@@ -20,7 +20,8 @@ int _strlen(char *str)
 	return (i);
 }
 
-/**string_nconcat - string to concatenate
+/**
+ * string_nconcat - string to concatenate
  * @s1: First string
  * @s2: Second string
  * @n: number of byte
