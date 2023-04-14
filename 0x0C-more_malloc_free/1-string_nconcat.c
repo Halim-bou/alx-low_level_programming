@@ -1,25 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-int _strlen(char *str);
-
-/**
- * _strlen - length of string
- * @str: The string
- *
- * Return: ...
- */
-int _strlen(char *str)
-{
-	int i;
-
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
 /**
  * string_nconcat - string to concatenate
  * @s1: First string
@@ -31,7 +12,8 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int i = 0, k, j, len1;
+	unsigned int i = 0, k, j;
+	unsigned int len1 = 0;
 
 	if (s1 == NULL)
 	{
@@ -41,8 +23,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
-	len1 = _strlen(s1);
+	while (s1[len1] != '\0')
+	{
+		len1++;
+	}
 
 	j = (len1 + n);
 
