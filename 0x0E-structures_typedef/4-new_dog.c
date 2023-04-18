@@ -13,7 +13,7 @@ int _strlen(char *str);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *N_dog;
 	int len1 = 0, len2 = 0;
 
 	if (name != NULL && owner != NULL)
@@ -21,28 +21,28 @@ dog_t *new_dog(char *name, float age, char *owner)
 		len1 = _strlen(name) + 1;
 		len2 = _strlen(owner) + 1;
 
-		new_dog = malloc(sizeof(dog_t));
-		if (new_dog == NULL)
+		N_dog = malloc(sizeof(dog_t));
+		if (N_dog == NULL)
 			return (NULL);
-		new_dog->name = malloc(sizeof(char) * len1);
-		if (new_dog->name == NULL)
+		N_dog->name = malloc(sizeof(char) * len1);
+		if (N_dog->name == NULL)
 		{
-			free(new_dog);
+			free(N_dog);
 			return (NULL);
 		}
-		new_dog->owner = malloc(sizeof(char) * len2);
-		if (new_dog->owner == NULL)
+		N_dog->owner = malloc(sizeof(char) * len2);
+		if (N_dog->owner == NULL)
 		{
-			free(new_dog->name);
-			free(new_dog);
+			free(N_dog->name);
+			free(N_dog);
 			return (NULL);
 		}
-		new_dog->name = _strcpy(new_dog->name, name);
-		new_dog->owner = _strcpy(new_dog->owner, owner);
-		new_dog->age = age;
+		N_dog->name = _strcpy(N_dog->name, name);
+		N_dog->owner = _strcpy(N_dog->owner, owner);
+		N_dog->age = age;
 	}
 
-	return (new_dog);
+	return (N_dog);
 }
 
 /**
@@ -59,7 +59,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[i] = src[i];
 	}
-	dest[i++] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
