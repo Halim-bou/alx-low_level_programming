@@ -1,4 +1,5 @@
-#include <udit86.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - chck the opcodes
