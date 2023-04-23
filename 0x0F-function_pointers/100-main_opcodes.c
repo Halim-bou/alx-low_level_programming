@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	bts = atoi(argv[1]);
 	if (bts < 0)
 	{
-		ptintf("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
 	while (i < bts)
