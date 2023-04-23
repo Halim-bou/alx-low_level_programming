@@ -26,12 +26,14 @@ int main(int argc, int *argv[])
 	}
 	d = (char *)&main;
 	bts = atoi(argv[1]);
-	while (i < bts - 1)
+	while (i < bts)
 	{
-		printf("%02hhx", d[i]);
+		printf("%02x", d[i] & 0xFF);
+		if (i != bts - 1)
+			printf(" ");
 		i++;
 	}
 
-	printf("%02hhx\n", d[i]);
+	printf("\n");
 	return (0);
 }
