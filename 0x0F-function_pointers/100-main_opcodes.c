@@ -5,8 +5,7 @@
  * main - chck the opcodes
  * @argc: arguments count
  * @argv: arguments value
- *
- * Return : Always 0 .
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
