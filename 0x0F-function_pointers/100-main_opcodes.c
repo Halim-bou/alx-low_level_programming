@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *d;
+	char *d = (char *) main;
 	int i = 0;
 	int bts;
 
@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 		ptintf("Error\n");
 		exit(2);
 	}
-	d = (char *)&main;
 	while (i < bts)
 	{
 		printf("%02x", d[i] & 0xFF);
