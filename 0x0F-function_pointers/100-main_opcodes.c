@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	if (atoi(argv[1]) < 0)
+	bts = atoi(argv[1]);
+	if (bts < 0)
 	{
 		ptintf("Error\n");
 		exit(2);
 	}
 	d = (char *)&main;
-	bts = atoi(argv[1]);
 	while (i < bts)
 	{
 		printf("%02x", d[i] & 0xFF);
