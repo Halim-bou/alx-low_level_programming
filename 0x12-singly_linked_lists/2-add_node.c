@@ -37,7 +37,7 @@ list_t *add_node(list_t **head, const char *str)
  *
  * Return: the length of the string.
  */
-int str_len(char *str)
+int str_len(const char *str)
 {
 	int i = 0;
 
