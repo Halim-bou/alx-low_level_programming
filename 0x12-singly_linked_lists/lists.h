@@ -19,15 +19,5 @@ typedef struct list_s
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
-
-int str_len(const char *s)
-{
-	int i;
-	while (*s)
-	{
-		i++;
-		s++;
-	}
-	return (i);
-}
+int str_len(char *str);
 #endif
