@@ -9,7 +9,7 @@
  *
  * Return: the address of the element, or NULL if it failed.
  */
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
 	list_t *nlist;
