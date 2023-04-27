@@ -25,18 +25,18 @@ list_t *add_node_end(list_t **head, const char *str);
 		nlist->len = str_len(str);
 		nlist->next = NULL;
 
-		if (*head != NULL)
+		if (*head == NULL)
+		{
+			*head = nlist;
+			return (*head);
+		}
+		else
 		{
 			temp = *head;
 			while (temp->next)
 				temp = temp->next;
-			temp->temp = nlist;
+			temp->next = nlist;
 			return (temp);
-		}
-		else
-		{
-			*head = nlist;
-			return (*head);
 		}
 	}
 	return (NULL);
