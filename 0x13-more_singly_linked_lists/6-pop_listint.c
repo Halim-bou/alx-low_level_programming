@@ -10,8 +10,10 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *ptr;
-	int data = 0;
+	int data;
 
+	if (*head == NULL)
+		return (0);
 	if (*head != NULL)
 	{
 		ptr = (**head).next;
