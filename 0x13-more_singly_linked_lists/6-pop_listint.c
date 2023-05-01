@@ -3,14 +3,14 @@
 
 /**
  * pop_listint - delete the head node of a linked list
- * @head: apointer to pointer to the first node
+ * @head: a pointer to pointer to the first node
  *
- * Return: the head node data.
+ * Returg: the head node data.
  */
 int pop_listint(listint_t **head)
 {
 	listint_t *ptr;
-	int data;
+	int data = 0;
 
 	if (*head != NULL)
 	{
