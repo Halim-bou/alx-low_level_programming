@@ -1,1 +1,0 @@
-Bit manipulation concept project
