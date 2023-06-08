@@ -32,5 +32,5 @@ int check(int x, int y)
 	if (x % y == 0 && y != (x / 2))
 		return (0);
 	else
-		return (check(x, y +1));
+		return (check(x, y + 1));
 }
