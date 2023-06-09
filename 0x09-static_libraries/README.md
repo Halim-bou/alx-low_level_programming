@@ -1,0 +1,1 @@
+statis libraries project
