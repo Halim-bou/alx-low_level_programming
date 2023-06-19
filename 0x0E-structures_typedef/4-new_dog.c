@@ -26,22 +26,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	n_name = malloc(len1 + 1);
 	if (n_name == NULL)
-		return (NULL);
-	while (name[i])
 	{
-		n_name[i] = name[i];
-		i++;
+		free(new_dog);
+		return (NULL);
 	}
+	for (i = 0; name[i]; i++)
+		n_name[i] = name[i];
 	n_name[i] = '\0';
 	n_owner = malloc(len2 + 1);
-	i = 0;
 	if (n_owner == NULL)
-		return (NULL);
-	while (owner[i])
 	{
-		n_owner[i] = owner[i];
-		i++;
+		free(n_name);
+		free(new_dog);
+		return (NULL);
 	}
+	for (i = 0; owner[i]; i++)
+		n_owner[i] = owner[i];
 	n_owner[i] = '\0';
 
 	(*new_dog).name = n_name;
