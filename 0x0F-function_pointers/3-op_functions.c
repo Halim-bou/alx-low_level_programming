@@ -8,7 +8,7 @@
  * @b: second integer
  * Return: the result
  */
-int op_add (int a, int b)
+int op_add(int a, int b)
 {
 	return (a + b);
 }
@@ -55,7 +55,7 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	if (b == 0 )
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
