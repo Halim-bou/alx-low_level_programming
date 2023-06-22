@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int (*func)(int, int);
+	int n1 = 0, n2 = 0, sum = 0;
 
 	if (argc != 4)
 	{
@@ -24,6 +25,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
+	sum = func(n1, n2);
+	printf("%d\n", sum);
 	return (0);
 }
