@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_number - print just the numbers
+ * print_numbers - print just the numbers
  * @separator: separator of numbers
  * @n: the number
  * Return: Nothing.
