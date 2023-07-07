@@ -24,7 +24,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		else
 			rev += odn & 1;
 		count++;
-		odn = odn & 1;
+		odn = odn >> 1;
 	}
 	while (count > 0)
 	{
