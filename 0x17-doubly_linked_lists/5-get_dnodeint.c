@@ -9,7 +9,7 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *ptr;
+	dlistint_t *ptr, *node;
 	unsigned int len = 0;
 
 	if (head == NULL)
@@ -21,10 +21,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		ptr = ptr->next;
 		if (len == index)
-			return (ptr);
-		if (len > index)
-			return (NULL);
+		{
+			node = ptr->prev;
+			free(ptr);
+			return (node);
+		}
 		len++;
 	}
+	free(ptr)
 	return (NULL);
 }
