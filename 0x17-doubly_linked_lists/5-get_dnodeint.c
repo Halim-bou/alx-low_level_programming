@@ -23,11 +23,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		if (len == index)
 		{
 			node = ptr->prev;
-			free(ptr);
 			return (node);
 		}
 		len++;
 	}
-	free(ptr)
 	return (NULL);
 }
