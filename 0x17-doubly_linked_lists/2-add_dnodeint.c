@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint.c - add new node at the biginning of doubly linked list
+ * add_dnodeint - add new node at the biginning of doubly linked list
  * @head: pointer to pointer to the first node
- * n: data of the new node
+ * @n: data of the new node
  * Return: The address of the first node or NULL if it fieled
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
