@@ -11,43 +11,43 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new = NULL;
-	dlistint_t *ptr, *ptr2 = NULL;
-	unsigned int len = 0, count = 0;
+	dlistint_t *ptr, *pr_ptr;
+	unsigned int len = 0;
 
+	ptr = *h;
 	if (*h == NULL && idx != 0)
 		return (NULL);
-	while ((*h)->prev != NULL)
-		*h = (*h)->prev;
-	ptr = *h;
-	while (ptr->next != NULL)
-	{
-		ptr = ptr->next;
-		len++;
-	}
-	ptr = *h;
-	if (idx == 0)
-	{
-		new = add_dnodeint(&ptr, n);
-		return (new);
-	}
-	if (idx == len)
-	{
-		new = add_dnodeint_end(&ptr, n);
-		return (new);
-	}
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-	while (count < idx - 1)
+	if (*h != NULL)
 	{
-		ptr = ptr->next;
-		count++;
+		pr_ptr = NULL;
+		while (ptr->prev != NULL)
+			ptr = ptr->prev;
+		for (len = 0; ptr != NULL && len < idx; len++)
+		{
+			pr_ptr = ptr;
+			ptr = ptr->next;
+		}
+		if (len == idx)
+		{
+			new->n = n;
+			new->prev = pr_ptr;
+			if (ptr != NULL)
+				ptr->prev = new;
+			new->next = ptr;
+			if (idx != 0)
+				pr_ptr->next = new;
+			else
+				*h = new;
+			return (new);
+		}
+		return (NULL);
 	}
-	ptr2 = ptr->next;
-	ptr->next = new;
-	ptr2->prev = new;
-	new->next = ptr2;
-	new->prev = ptr;
+	new->next = NULL;
+	new->prev = NULL;
 	new->n = n;
+	*h = new;
 	return (new);
 }
