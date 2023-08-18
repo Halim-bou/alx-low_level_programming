@@ -14,6 +14,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (*head == NULL)
 		return (-1);
+	ptr1 = *head;
 	while (ptr1->prev != NULL)
 		ptr1 = ptr1->prev;
 	while (ptr1->next != NULL && len < index)
