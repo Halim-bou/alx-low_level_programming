@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main2.h"
 /**
  * add - ...d
  * @a: ...
