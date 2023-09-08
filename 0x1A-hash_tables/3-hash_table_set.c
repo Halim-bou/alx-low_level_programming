@@ -18,8 +18,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL)
 		return (0);
 	failer = 1;
-	idx = key_index((unsigned char *)key, ht->size);
-	new_node = malloc(sizeof(hash_table_t));
+	idx = key_index((unsigned char *) key, ht->size);
+	new_node = malloc(sizeof(hash_nodee_t));
 	if (new_node == NULL)
 		return (0);
 	if (ht->array[idx] == NULL)
@@ -52,7 +52,7 @@ int list_checker(hash_table_t *ht, char *key,
 	hash_node_t *ptr, *new_node;
 
 	ptr = ht->array[index];
-	while (ptr)
+	while (ptr != NULL)
 	{
 		if (strcmp(key, ptr->key) == 0)
 		{
@@ -70,7 +70,7 @@ int list_checker(hash_table_t *ht, char *key,
 		return (0);
 	new_node->next = ptr;
 	new_node->key = strdup(key);
-	if (new_node->value == NULL)
+	if (new_node->key == NULL)
 		return (0);
 	new_node->value = strdup(value);
 	if (new_node->value == NULL)
