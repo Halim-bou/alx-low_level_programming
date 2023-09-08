@@ -11,15 +11,15 @@ int list_checker(hash_table_t *ht, char *key,
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx = 0;
+	unsigned long int idx;
 	hash_node_t *new_node;
 	int failer;
 
 	if (ht == NULL)
 		return (0);
 	failer = 1;
-	idx = key_index((unsigned char *) key, ht->size);
-	new_node = malloc(sizeof(hash_nodee_t));
+	idx = key_index((unsigned char *)key, ht->size);
+	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
 	if (ht->array[idx] == NULL)
