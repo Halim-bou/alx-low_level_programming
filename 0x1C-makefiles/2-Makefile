@@ -1,0 +1,7 @@
+#first useful makefiel task 2
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC: .c=.o)
+NAME=school
+all: $(obj)
+	$(CC) $(OBJ) -o $(NAME)
