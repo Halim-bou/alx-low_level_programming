@@ -1,4 +1,4 @@
-#make file for task 4
+#make file for task 100
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -pedantic
 SRC=main.c school.c
@@ -6,12 +6,12 @@ OBJ=$(SRC:.c=.o)
 NAME=school
 RM=rm
 .PHONY: all clean oclean fclean re
-all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+all: $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
 clean:
-	$(RM) -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 fclean:
 	clean oclean
 re: oclean all
