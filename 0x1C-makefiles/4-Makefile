@@ -1,12 +1,13 @@
-#make file for task 3
+#make file for task 4
 CC=gcc
+CFLAGS=-Wall -Wextra -Werror -pedantic
 SRC=main.c school.c
 OBJ=$(SRC:.c=.o)
 NAME=school
 RM=rm
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
 	$(RM) -f *~ $(NAME)
 oclean:
