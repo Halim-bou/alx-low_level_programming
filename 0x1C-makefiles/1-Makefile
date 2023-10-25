@@ -1,0 +1,5 @@
+#makefile for task 2 usig variables
+CC=gcc
+SRC=main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o school
