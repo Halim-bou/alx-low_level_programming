@@ -16,7 +16,7 @@ int binary_search(int *array, size_t size, int value)
 
 	start = cmp = 0;
 	end = size - 1;
-	while (start <= end)
+	while (start <= end && array != NULL)
 	{
 		print_array(array, start, end);
 		cmp = (start + end) / 2;
