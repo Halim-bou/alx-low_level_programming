@@ -25,7 +25,7 @@ int binary_search(int *array, size_t size, int value)
 		else if (array[cmp] > value)
 			end = cmp;
 		else if (array[cmp] < value)
-			start = smp + 1;
+			start = cmp + 1;
 	}
 	return (-1);
 }
