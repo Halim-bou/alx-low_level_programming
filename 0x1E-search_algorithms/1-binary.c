@@ -1,5 +1,4 @@
 #include "search_algos.h"
-void print_array(int *array, int start, int end);
 
 /**
  * binary_search - Function that search for a value in a
@@ -12,42 +11,26 @@ void print_array(int *array, int start, int end);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int start, end, cmp;
+	int start, end, i;
 
-	start = cmp = 0;
+	start = 0;
 	end = size - 1;
-	while (start <= end && array != NULL)
+	if (array == NULL)
+		return (-1);
+
+	while (end >= start)
 	{
-		print_array(array, start, end);
-		cmp = (start + end) / 2;
-		if (array[cmp] == value)
-			return (cmp);
-		else if (array[cmp] > value)
-			end = cmp;
-		else if (array[cmp] < value)
-			start = cmp + 1;
+		printf("Searching in array: ");
+		for (i = start; i < end; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
+		i = start + (end - start) / 2;
+		if (array[i] == value)
+			return (i);
+		else if (array[i] > value)
+			end = i - 1;
+		else
+			start = i + 1;
 	}
 	return (-1);
-}
-
-/**
- * print_array - print the using array
- * @array: The array
- * @start:index from array start
- * @end: index where array end printing
- */
-void print_array(int *array, int start, int end)
-{
-	int i;
-
-	i = start;
-	printf("Searching in array: ");
-	while (i <= end)
-	{
-		if (i > start)
-			printf(", ");
-		printf("%d", array[i]);
-		i++;
-	}
-	printf("\n");
 }
