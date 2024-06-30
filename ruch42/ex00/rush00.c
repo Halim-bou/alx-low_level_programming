@@ -1,10 +1,4 @@
-/**
- * rush - function that print a pattern.
- * x: size of rows.
- * y: size of columns
- * Return: Nothing.
- */
- #include "rush00.h"
+void ft_putchar(char c);
 
  void   ft_row_printer(char first, char midd, char last, int row_size)
  {
